@@ -16,10 +16,10 @@ namespace BestTAsController.Controllers
         }
 
         [HttpGet]
-        [Route("SayHelloTwo/{name}")]
-        public SayHelloTwoModel SayHelloTwo( SayHelloTwoModel sayHelloTwoModel )
+        [Route("SayHelloTwo")]
+        public string SayHelloTwo( SayHelloTwoModel sayHelloTwoModel )
         {
-            return sayHelloTwoModel;
+            return _sayHelloTwoServices.SayHelloTwo( sayHelloTwoModel );
         }
     }
 }
